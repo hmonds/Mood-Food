@@ -23,12 +23,20 @@ class MainHandler(webapp2.RequestHandler):
         <!DOCTYPE html>
         <head><link rel="stylesheet" href="stylesheet.css">
         </head>
-        <title>Mood Food</title>
+        <title>
+            Mood Food
+        </title>
         <body bgcolor="red">
         <center>
         <h1>
-        Mood Food
+            Mood Food
         </h1>
+        <h2><link rel="sign up" href="">
+            sign up
+        </h2>
+        <h2>
+            sign in
+        </h2>
         </center>
         '''
         )
