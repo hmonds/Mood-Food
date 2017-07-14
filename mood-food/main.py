@@ -15,11 +15,52 @@
 # limitations under the License.
 #
 import webapp2
+import jinja2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        self.response.write('''
+        <!DOCTYPE html>
+        <head><link rel="stylesheet" href="stylesheet.css">
+        </head>
+        <title>Mood Food</title>
+        <body bgcolor="red">
+        <center>
+        <h1>
+        Mood Food
+        </h1>
+        </center>
+        '''
+        )
+class QuizineHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('''
+        <!DOCTYPE html>
+        <head><link rel="stylesheet" href="stylesheet.css">
+        </head>
+        <title>Quizine</title>
+        <body bgcolor="red">
+
+        <center>
+        <h1>
+        Quizine
+        </h1>
+
+        <div class="quiz">
+
+        <h2 class="Quizine">: What is your mood?</h2>
+        <ul data-quiz-question="Quizine">
+            <li class="quiz-answer" data-quiz-answer="a">a. Happy</li>
+            <li class="quiz-answer" data-quiz-answer="b">b. Angry</li>
+            <li class="quiz-answer" data-quiz-answer="c">c. Sad</li>
+            <li class="quiz-answer" data-quiz-answer="d">d. Tired</li>
+        </ul>
+        </div>
+        <div class="quiz-result"></div>
+        </center>
+        ''')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/Quizine', QuizineHandler)
 ], debug=True)
