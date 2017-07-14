@@ -32,10 +32,8 @@ class MainHandler(webapp2.RequestHandler):
             Mood Food
         </h1>
         <h2><link rel="sign up" href="">
-            sign up
         </h2>
-        <h2>
-            sign in
+        <h2><link rel="sign in" href="">
         </h2>
         </center>
         '''
@@ -67,34 +65,8 @@ class QuizineHandler(webapp2.RequestHandler):
         <div class="quiz-result"></div>
         </center>
         ''')
-class SignUpHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('''
-        <!DOCTYPE html>
-        <title>Mood Food</title>
-        <form action="/action_page.php">
-          <div class="container">
-            <label><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-            <input type="checkbox" checked="checked"> Remember me
-            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-            <div class="clearfix">
-              <button type="button"  class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
-            </div>
-          </div>
-        </form>
-        ''')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/Quizine', QuizineHandler)
-    ('/SignUp', SignUpHandler)
 ], debug=True)
