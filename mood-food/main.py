@@ -26,18 +26,11 @@ class MainHandler(webapp2.RequestHandler):
         <title>
             Mood Food
         </title>
-        <body bgcolor="red">
+        <body bgcolor = "#fcbfac">
         <center>
-        <h1>
-            Mood Food
-        </h1>
-        <h2>
-            <a href="SignUpHandler">sign up</a>
-        </h2>
-        <h2>
-            sign in
-        </h2>
+        <img src="resources/moodfood.jpg" alt="logo">
         </center>
+
         '''
         )
 class QuizineHandler(webapp2.RequestHandler):
@@ -66,6 +59,35 @@ class QuizineHandler(webapp2.RequestHandler):
         </div>
         <div class="quiz-result"></div>
         </center>
+        ''')
+class AngryHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('''
+        <!DOCTYPE html>
+        <head>
+        <title>Happy</title>
+        </head>
+
+        <body bgcolor = Teal>
+        <h1>Angry</h1>
+        <ul>
+            <ls>Barley <ul> Description </ul> </ls>
+            <ls>Celery <ul> Description </ul> </ls>
+            <ls>Purple Cabbage <ul> Description </ul> </ls>
+            <ls>Apples and Peanut Butter <ul> Boots energy which can help to improve mood </ul> </ls>
+            <ls>Walnuts <ul> Rich in Omgea-1 fatty acids which have been proven to make you happier </ul> </ls>
+            <ls>Bananas <ul> Rich in potassium and vitamin B. Slows down heart rate and helps to control blood pressure </ul> </ls>
+            <ls>Grilled Cheese on Whole Wheat Bread <ul> A mixture of carbs and calcium help to improve mood </ul> </ls>
+            <ls>Peanuts and Popcorn <ul> Description </ul> </ls>
+            <ls>Mac and Cheese <ul> Pasta is a carbohydrate which releases serotonin which causes a feeling of comfort, thus helping to reduce anger levels </ul> </ls>
+            <ls>Chocolate <ul> Releases endorphins which boosts moods </ul> </ls>
+            <ls>Strawberries <ul> Rich in vitamin C which helps to release endorphins </ul> </ls>
+            <ls>Hot Peppers <ul> The body's natural reaction to pain is to release endorphins, so when eating spicy foods, it releases endorphins to subside the pain </ul> </ls>
+            <ls>Salsa <ul> Description </ul> </ls>
+            <ls>Wasabi <ul> Description </ul> </ls>
+            <ls>Ice Cream <ul> It is high in sugar and fats which would release dopamine which causes pleasure </ul> </ls>
+            <ls>Baked Potato <ul> Rich in vitamin B which reduces stress levels and reduces blood pressure </ul> </ls>
+            </html>
         ''')
 
 
