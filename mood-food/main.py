@@ -31,9 +31,11 @@ class MainHandler(webapp2.RequestHandler):
         <h1>
             Mood Food
         </h1>
-        <h2><link rel="sign up" href="">
+        <h2>
+            <a href="SignUpHandler">sign up</a>
         </h2>
-        <h2><link rel="sign in" href="">
+        <h2>
+            sign in
         </h2>
         </center>
         '''
@@ -66,7 +68,8 @@ class QuizineHandler(webapp2.RequestHandler):
         </center>
         ''')
 
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/Quizine', QuizineHandler)
+    ('/Quizine', QuizineHandler),
 ], debug=True)
