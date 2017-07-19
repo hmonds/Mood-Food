@@ -45,14 +45,11 @@ class QuizineHandler(webapp2.RequestHandler):
         </head>
         <title>Quizine</title>
         <body bgcolor="red">
-
         <center>
         <h1>
         Quizine
         </h1>
-
         <div class="quiz">
-
         <h2 class="Quizine">: What is your mood?</h2>
         <ul data-quiz-question="Quizine">
             <li class="quiz-answer" data-quiz-answer="a">a. Happy</li>
