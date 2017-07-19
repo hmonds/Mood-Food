@@ -21,18 +21,18 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('''
         <!DOCTYPE html>
-        <head><link rel="stylesheet" href="stylesheet.css">
+        <head><link rel="stylesheet" href="style/stylesheet.css">
         </head>
         <title>
             Mood Food
         </title>
-        <body bgcolor = "#fcbfac">
+
         <center>
-        <img src="resources/moodfood.jpg" alt="logo">
-        <a href="/Angry"><img id="angry-face" src="resources/angry.png" alt= "logo"></a>
-        <a href="/Tired"><img src="resources/Sleeping_Emoji.png" alt="Sleepy"></a>
-        <a href="/Sad"><img src="resources/Sad_Face_Emoji.png" alt="Sad"></a>
-        <a href="/Happy"><img src="resources/Happy_Emoji_Icon.png" alt="Happy"></a>
+        <img src="resources/moodfood.jpg" alt="logo"> <br>
+        <a href="/Angry"><img id="Angry" src="resources/angry.png" alt= "logo"></a>
+        <a href="/Tired"><img id= "Tired" src="resources/Sleeping_Emoji.png" alt="Sleepy"></a>
+        <a href="/Sad"><img id="Sad" src="resources/Sad_Face_Emoji.png" alt="Sad"></a>
+        <a href="/Happy"><img id= "Happy" src="resources/Happy_Emoji_Icon.png" alt="Happy"></a>
         </center>
 
         '''

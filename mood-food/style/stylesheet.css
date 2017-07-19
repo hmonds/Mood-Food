@@ -1,7 +1,5 @@
-<head>
-<style>
 body {
-  background-color: black;
+  background-color: #fcbfac;
 }
 
 h1 {
@@ -19,5 +17,7 @@ p {
   border: padding: margin:
 }
 
-</style>
-</head>
+#Angry, #Happy, #Sad, #Tired {
+  width: 10%;
+  height: auto;
+}
