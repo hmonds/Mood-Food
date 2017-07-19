@@ -3,18 +3,17 @@ body {
 }
 
 h1 {
-  color: maroon;
-  margin-left: 40px;
-  font-family: fifteen
-  font-size: 160%;
+  font-family: cursive;
 }
 
 ul {
   list-style-type: circle;
+  font-family: sans-serif;
 }
 
 p {
-  border: padding: margin:
+  font-weight: bold;
+  font-size: 200%;
 }
 
 #Angry, #Happy, #Sad, #Tired {

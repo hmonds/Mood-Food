@@ -29,6 +29,7 @@ class MainHandler(webapp2.RequestHandler):
 
         <center>
         <img src="resources/moodfood.jpg" alt="logo"> <br>
+        <p> Please select the mood you are currently feeling</p>
         <a href="/Angry"><img id="Angry" src="resources/angry.png" alt= "logo"></a>
         <a href="/Tired"><img id= "Tired" src="resources/Sleeping_Emoji.png" alt="Sleepy"></a>
         <a href="/Sad"><img id="Sad" src="resources/Sad_Face_Emoji.png" alt="Sad"></a>
@@ -37,31 +38,6 @@ class MainHandler(webapp2.RequestHandler):
 
         '''
         )
-class QuizineHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('''
-        <!DOCTYPE html>
-        <head><link rel="stylesheet" href="stylesheet.css">
-        </head>
-        <title>Quizine</title>
-        <body bgcolor="red">
-        <center>
-        <h1>
-        Quizine
-        </h1>
-        <div class="quiz">
-        <h2 class="Quizine">: What is your mood?</h2>
-        <ul data-quiz-question="Quizine">
-            <li class="quiz-answer" data-quiz-answer="a">a. Happy</li>
-            <li class="quiz-answer" data-quiz-answer="b">b. Angry</li>
-            <li class="quiz-answer" data-quiz-answer="c">c. Sad</li>
-            <li class="quiz-answer" data-quiz-answer="d">d. Tired</li>
-        </ul>
-        </div>
-        <div class="quiz-result"></div>
-        </center>
-        ''')
-
 class AngryHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('''
@@ -70,7 +46,7 @@ class AngryHandler(webapp2.RequestHandler):
         <title>Angry</title>
         </head>
 
-        <body bgcolor = Teal>
+        <body bgcolor =#fa7777>
         <h1>Angry</h1>
         <ul>
             <ls>Apples and Peanut Butter <ul> Boots energy which can help to improve mood </ul> </ls>
@@ -98,7 +74,7 @@ class HappyHandler(webapp2.RequestHandler):
         <title>Happy</title>
         </head>
 
-        <body bgcolor = Teal>
+        <body bgcolor =#faec8d >
         <h1>Happy</h1>
         <ul>
             <ls> Black Bean Brownies <ul> Rich in iron, fiber, copper, zinc, and potassium  </ul> </ls>
@@ -118,7 +94,7 @@ class TiredHandler(webapp2.RequestHandler):
         <title>Tired</title>
         </head>
 
-        <body bgcolor = Teal>
+        <body bgcolor =#c096e9>
         <h1>Tired</h1>
         <ul>
             <ls> Salmon <ul> This fish's hefty dose of protein speeds metabolism, which increases energy.</ul> </ls>
@@ -136,7 +112,7 @@ class SadHandler(webapp2.RequestHandler):
         <title>Sad</title>
         </head>
 
-        <body bgcolor = Teal>
+        <body bgcolor =#a1cbf1>
         <h1>Sad</h1>
         <ul>
             <ls> Cold-Water Fish <ul> Fish is also a great source of lean protein, which stabilizes blood sugar. Eating small amounts of protein with meals can help keep your mood on a more even keel.</ul> </ls>
@@ -152,7 +128,6 @@ class SadHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/Quizine', QuizineHandler),
     ('/Angry', AngryHandler),
     ('/Happy', HappyHandler),
     ('/Sad', SadHandler),
